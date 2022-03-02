@@ -1,19 +1,19 @@
 import requests
-
+from key import api_key
 #Algún lugar por Australia
-LAT = -33.868820
-LONG = 151.209290
+# LAT = -33.868820
+# LONG = 151.209290
 #GDL
-# LAT = 35.0075
-# LONG = -84.1895
-api_key = "0335278328bb97a3d71b84836922c460"
+LAT = 35.0075
+LONG = -84.1895
+key = api_key
 open_weather_endpoint = "https://api.openweathermap.org/data/2.5/onecall"
 
 params = {
     "lat": LAT,
     "lon": LONG,
     "exclude": "current,minutely,daily,alerts",
-    "appid": api_key,
+    "appid": key,
 }
 
 response = requests.get(url=open_weather_endpoint, params=params)
